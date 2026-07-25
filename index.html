@@ -962,7 +962,11 @@
     setTimeout(() => toast.classList.remove('show'), 4000);
   }
 
-  // Contact Form - Send via secure server endpoint
+  // Contact Form - Send to Telegram
+  const TELEGRAM_BOT_TOKEN = '8625772033:AAEJXPcrQLTwUHE4SR18Rw8YBSIWkgrxNSU';
+  const TELEGRAM_CHAT_ID = '8230248537';
+  const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
   document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
 
@@ -979,31 +983,41 @@
       return;
     }
 
+    // Disable button & show loader
     submitBtn.disabled = true;
     btnText.textContent = 'Sending...';
     btnLoader.classList.remove('hidden');
 
+    const formattedMessage = ` *New Contact Message*\n\n` +
+      `👤 *Name:* ${name}\n` +
+      `📧 *Email:* ${email}\n` +
+      ` *Exam:* ${exam}\n` +
+      `📝 *Message:*\n${message}\n\n` +
+      ` *Time:* ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}\n` +
+      ` *Source:* LastTopper Landing Page`;
+
     try {
-      const contactApiUrl = window.CONTACT_API_URL || '/api/contact';
-      const response = await fetch(contactApiUrl, {
+      const response = await fetch(TELEGRAM_API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, exam, message })
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text: formattedMessage,
+          parse_mode: 'Markdown'
+        })
       });
 
       const data = await response.json();
 
-      if (response.ok && data.ok) {
+      if (data.ok) {
         showToast('✅ Message sent successfully! We\'ll reply soon.', 'success');
         document.getElementById('contactForm').reset();
-      } else if (response.status === 404) {
-        throw new Error('The contact backend is not available on this deployment.');
       } else {
-        throw new Error(data.error || 'Failed to send');
+        throw new Error(data.description || 'Failed to send');
       }
     } catch (err) {
-      console.error('Contact send error:', err);
-      showToast('❌ Failed to send. Please configure a live backend for Telegram.', 'error');
+      console.error('Telegram send error:', err);
+      showToast('❌ Failed to send. Please try again.', 'error');
     } finally {
       submitBtn.disabled = false;
       btnText.textContent = 'Submit';
