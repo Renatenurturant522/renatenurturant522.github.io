@@ -7,6 +7,10 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
+app.get('/health', (_req, res) => {
+  res.json({ ok: true, status: 'ready' });
+});
+
 function buildTelegramMessage({ name, email, exam, message }) {
   const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
   return `*New Contact Message*\n\n👤 *Name:* ${name}\n📧 *Email:* ${email}\n🎯 *Exam:* ${exam}\n📝 *Message:*\n${message}\n\n🕒 *Time:* ${timestamp}\n🌐 *Source:* LastTopper Landing Page`;
@@ -20,8 +24,8 @@ app.post('/api/contact', async (req, res) => {
       return res.status(400).json({ ok: false, error: 'Missing required fields' });
     }
 
-    const botToken = process.env.TELEGRAM_BOT_TOKEN;
-    const chatId = process.env.TELEGRAM_CHAT_ID;
+    const botToken = process.env.TELEGRAM_BOT_TOKEN?.trim();
+    const chatId = process.env.TELEGRAM_CHAT_ID?.trim();
 
     if (!botToken || !chatId) {
       return res.status(500).json({ ok: false, error: 'Telegram credentials are not configured' });
@@ -51,11 +55,13 @@ app.post('/api/contact', async (req, res) => {
 });
 
 app.get('*', (_req, res) => {
-  res.sendFile(path.join(__dirname, 'Index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(port, () => {
-  console.log(`LastTopper server listening on port ${port}`);
-});
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`LastTopper server listening on port ${port}`);
+  });
+}
 
 module.exports = { app, buildTelegramMessage };
