@@ -984,7 +984,8 @@
     btnLoader.classList.remove('hidden');
 
     try {
-      const response = await fetch('/api/contact', {
+      const contactApiUrl = window.CONTACT_API_URL || '/api/contact';
+      const response = await fetch(contactApiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, exam, message })
@@ -995,12 +996,14 @@
       if (response.ok && data.ok) {
         showToast('✅ Message sent successfully! We\'ll reply soon.', 'success');
         document.getElementById('contactForm').reset();
+      } else if (response.status === 404) {
+        throw new Error('The contact backend is not available on this deployment.');
       } else {
         throw new Error(data.error || 'Failed to send');
       }
     } catch (err) {
       console.error('Contact send error:', err);
-      showToast('❌ Failed to send. Please try again.', 'error');
+      showToast('❌ Failed to send. Please configure a live backend for Telegram.', 'error');
     } finally {
       submitBtn.disabled = false;
       btnText.textContent = 'Submit';
