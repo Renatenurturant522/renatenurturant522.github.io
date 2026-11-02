@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BrightPath Web Design | Websites That Win Customers</title>
-<meta name="description" content="Professional websites for local businesses. Modern design, mobile-friendly layouts, and affordable website packages. Get a free quote from BrightPath Web Design.">
+<meta name="description" content="Professional websites and ongoing website support for local businesses. Affordable, modern web design by BrightPath Web Design.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -39,7 +39,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(8,15,29,.94);
+  background: rgba(8,15,29,.96);
   border-bottom: 1px solid #ffffff12;
   backdrop-filter: blur(12px);
 }
@@ -63,8 +63,8 @@ nav {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 25px;
-  font-size: 14px;
+  gap: 22px;
+  font-size: 13px;
   color: var(--muted);
 }
 
@@ -79,6 +79,7 @@ nav {
   font-weight: 800;
   font-size: 14px;
   transition: .2s;
+  text-align: center;
 }
 
 .btn:hover {
@@ -104,7 +105,7 @@ nav {
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 h1 {
@@ -140,7 +141,7 @@ section { padding: 85px 0; }
 
 .section-heading {
   text-align: center;
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto 45px;
 }
 
@@ -179,7 +180,7 @@ section { padding: 85px 0; }
   margin-bottom: 15px;
 }
 
-#pricing { background: #0c1628; }
+#pricing, #maintenance { background: #0c1628; }
 
 .price-card {
   padding: 30px;
@@ -231,10 +232,7 @@ section { padding: 85px 0; }
   margin-right: 10px;
 }
 
-.price-card .btn {
-  text-align: center;
-  width: 100%;
-}
+.price-card .btn { width: 100%; }
 
 .pricing-note {
   color: var(--muted);
@@ -377,6 +375,34 @@ section { padding: 85px 0; }
 
 .step p { color: var(--muted); font-size: 14px; }
 
+.support-box {
+  max-width: 850px;
+  margin: 45px auto 0;
+  background: #14243b;
+  border: 1px solid #3985ff55;
+  border-radius: 13px;
+  padding: 28px;
+}
+
+.support-box h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.support-box p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.support-box ul {
+  padding-left: 20px;
+  color: #d5deec;
+  font-size: 14px;
+}
+
+.support-box li { margin: 8px 0; }
+
 .contact-section {
   text-align: center;
   background: linear-gradient(135deg,#12356b,#0b172b);
@@ -400,11 +426,12 @@ footer {
   text-align: center;
 }
 
+footer p { margin-top: 6px; }
+
 @media(max-width: 800px) {
   .cards, .steps { grid-template-columns: 1fr; }
   .price-card.featured { transform: none; }
   .nav-links { gap: 12px; font-size: 12px; }
-  .nav-links .nav-quote { display: none; }
   .hero { padding: 75px 0; }
 }
 
@@ -425,6 +452,7 @@ footer {
         <a href="#services">Services</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#pricing">Pricing</a>
+        <a href="#maintenance">Maintenance</a>
         <a class="btn nav-quote" href="mailto:brightpathwebdesign@proton.me?subject=Free%20Website%20Quote">Get a Quote</a>
       </div>
     </nav>
@@ -535,8 +563,83 @@ footer {
       </div>
 
     </div>
-
     <p class="pricing-note">Prices are starting estimates. Final quotes depend on project scope. Domain registration, hosting, paid services, and special features may cost extra.</p>
+  </div>
+</section>
+
+<section id="maintenance">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">Ongoing Website Support</div>
+      <h2>Keep Your Website Looking Its Best</h2>
+      <p>Choose an optional monthly maintenance plan for help with updates and website changes after launch.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card price-card">
+        <div class="price-label">Basic Care</div>
+        <h3>Basic Maintenance</h3>
+        <div class="price">$49</div>
+        <div class="price-note">Per month</div>
+        <p>For businesses that occasionally need small website updates.</p>
+        <ul>
+          <li>Up to 30 minutes of updates monthly</li>
+          <li>Small text changes</li>
+          <li>Small image replacements</li>
+          <li>Email support for requests</li>
+        </ul>
+        <a class="btn btn-outline" href="mailto:brightpathwebdesign@proton.me?subject=Basic%20Maintenance%20Plan">Choose Basic</a>
+      </div>
+
+      <div class="card price-card featured">
+        <div class="price-label">Most Popular</div>
+        <h3>Business Maintenance</h3>
+        <div class="price">$99</div>
+        <div class="price-note">Per month</div>
+        <p>For businesses that need regular website attention.</p>
+        <ul>
+          <li>Up to 1 hour of updates monthly</li>
+          <li>Text and image changes</li>
+          <li>Small content updates</li>
+          <li>Broken-link checks upon request</li>
+          <li>Email support for requests</li>
+        </ul>
+        <a class="btn" href="mailto:brightpathwebdesign@proton.me?subject=Business%20Maintenance%20Plan">Choose Business</a>
+      </div>
+
+      <div class="card price-card">
+        <div class="price-label">Priority Care</div>
+        <h3>Priority Maintenance</h3>
+        <div class="price">$149</div>
+        <div class="price-note">Per month</div>
+        <p>For businesses that need more frequent updates and support.</p>
+        <ul>
+          <li>Up to 2 hours of updates monthly</li>
+          <li>Text, image, and content changes</li>
+          <li>Small layout adjustments</li>
+          <li>Priority handling of requests</li>
+          <li>Email support for requests</li>
+        </ul>
+        <a class="btn btn-outline" href="mailto:brightpathwebdesign@proton.me?subject=Priority%20Maintenance%20Plan">Choose Priority</a>
+      </div>
+
+    </div>
+
+    <p class="pricing-note">Monthly plans are optional. Unused update time does not roll over. New pages, redesigns, major repairs, custom features, and third-party fees are quoted separately.</p>
+
+    <div class="support-box">
+      <h3>How Website Support Works</h3>
+      <p>BrightPath Web Design provides maintenance and support when requested by the client. To receive help, clients must notify us when they notice a problem, need an update, or experience an issue with their website.</p>
+      <ul>
+        <li>Clients are responsible for bringing website problems to our attention.</li>
+        <li>We do not provide continuous 24/7 monitoring or automatic problem detection.</li>
+        <li>Work begins after we receive and review a support request.</li>
+        <li>Response and completion times depend on the issue and our agreed service schedule.</li>
+        <li>Work beyond the included monthly time or plan scope may require an additional quote.</li>
+      </ul>
+      <p style="margin-top:15px;">Specific services, response expectations, billing terms, and exclusions will be confirmed in the client's maintenance agreement before work begins.</p>
+    </div>
   </div>
 </section>
 
