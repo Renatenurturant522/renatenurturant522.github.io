@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BrightPath Web Design builds professional websites that help local businesses grow.">
+  <title>BrightPath Web Design | Websites That Grow Your Business</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080f20;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 8%;
+      border-bottom: 1px solid #202d45;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .logo span {
+      color: #3997ff;
+    }
+
+    nav a {
+      color: #d5deec;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      background: radial-gradient(circle at 80% 40%, #173d70 0%, #080f20 55%);
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .tag {
+      color: #58aaff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.1;
+      margin: 22px 0;
+    }
+
+    h1 span {
+      color: #3997ff;
+    }
+
+    .hero p {
+      color: #b9c7da;
+      font-size: 18px;
+      max-width: 570px;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #2387f5;
+      color: white;
+      padding: 15px 26px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #0870df;
+      transform: translateY(-2px);
+    }
+
+    .services {
+      padding: 85px 8%;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .services > p {
+      color: #aebdd1;
+      margin-bottom: 40px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      text-align: left;
+    }
+
+    .service-card {
+      background: #111d32;
+      border: 1px solid #263954;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .service-card h3 {
+      color: #58aaff;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: #b9c7da;
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 85px 8%;
+      background: #101c30;
+    }
+
+    .contact h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #b9c7da;
+      margin-bottom: 28px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #8798ae;
+      font-size: 13px;
+      border-top: 1px solid #263954;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        padding: 65px 7%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">BrightPath<span>.</span></div>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="tag">Web Design That Works</div>
+
+      <h1>
+        Your Business Deserves
+        <span>A Better Website.</span>
+      </h1>
+
+      <p>
+        We build modern, professional websites that help local
+        businesses attract customers, build trust, and grow.
+      </p>
+
+      <a href="#contact" class="button">Get Your Free Quote</a>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Websites Built for Your Business</h2>
+
+    <p>Professional web design for businesses ready to grow.</p>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <h3>Barbers & Salons</h3>
+        <p>Showcase your work, services, and booking options with a professional website.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Auto Detailing</h3>
+        <p>Display your detailing packages, before-and-after photos, and quote options.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Landscaping</h3>
+        <p>Show potential customers your projects and make requesting estimates easy.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Cleaning Services</h3>
+        <p>Build trust and help customers request cleaning quotes online.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Restaurants</h3>
+        <p>Show menus, locations, hours, and ordering information.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Small Businesses</h3>
+        <p>Give your business a professional online presence that works on every device.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Ready to Grow Your Business?</h2>
+
+    <p>Let's build a website that works as hard as you do.</p>
+
+    <a href="mailto:YOUR-EMAIL@example.com" class="button">
+      Contact BrightPath
+    </a>
+  </section>
+
+  <footer>
+    © 2026 BrightPath Web Design. All rights reserved.
+  </footer>
+
+</body>
+</html>
