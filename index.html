@@ -3,176 +3,395 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BrightPath Web Design builds professional websites that help local businesses grow.">
-  <title>BrightPath Web Design | Websites That Grow Your Business</title>
+  <meta name="description" content="BrightPath Web Design creates premium, mobile-friendly websites that help local businesses attract more customers.">
+  <title>BrightPath Web Design | Build Your Business Online</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --background: #080e1b;
+      --surface: #101a2c;
+      --blue: #378cff;
+      --white: #ffffff;
+      --muted: #a6b3c7;
+      --border: rgba(255,255,255,.09);
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #080f20;
-      color: #ffffff;
+      background: var(--background);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 88%);
+      margin: auto;
+    }
+
     header {
+      height: 82px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 24px 8%;
-      border-bottom: 1px solid #202d45;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(8,14,27,.94);
+      backdrop-filter: blur(15px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .logo {
-      font-size: 23px;
-      font-weight: bold;
-      color: #ffffff;
+      font-family: 'Manrope', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -1px;
     }
 
     .logo span {
-      color: #3997ff;
+      color: var(--blue);
     }
 
-    nav a {
-      color: #d5deec;
-      text-decoration: none;
-      margin-left: 25px;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
       font-size: 14px;
+      color: #c5cede;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-button {
+      background: var(--blue);
+      padding: 11px 19px;
+      border-radius: 6px;
+      font-weight: 700;
+      color: white;
     }
 
     .hero {
-      min-height: 570px;
-      display: flex;
-      align-items: center;
-      padding: 80px 8%;
-      background: radial-gradient(circle at 80% 40%, #173d70 0%, #080f20 55%);
+      padding: 115px 0 105px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 75% 35%, rgba(35,111,225,.20), transparent 48%),
+        var(--background);
     }
 
     .hero-content {
-      max-width: 720px;
+      max-width: 790px;
     }
 
-    .tag {
-      color: #58aaff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #75b5ff;
       font-size: 12px;
-      font-weight: bold;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      background: var(--blue);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.15;
     }
 
     h1 {
-      font-size: clamp(42px, 6vw, 68px);
-      line-height: 1.1;
-      margin: 22px 0;
+      font-size: clamp(43px, 6.5vw, 76px);
+      letter-spacing: -3px;
+      margin-bottom: 25px;
     }
 
     h1 span {
-      color: #3997ff;
+      color: var(--blue);
     }
 
-    .hero p {
-      color: #b9c7da;
+    .hero-description {
+      color: var(--muted);
       font-size: 18px;
-      max-width: 570px;
-      margin-bottom: 32px;
+      max-width: 610px;
+      margin-bottom: 34px;
+      line-height: 1.8;
     }
 
-    .button {
+    .primary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue);
+      padding: 16px 25px;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: .25s;
+      box-shadow: 0 8px 30px rgba(55,140,255,.17);
+    }
+
+    .primary-button:hover {
+      background: #5aa0ff;
+      transform: translateY(-3px);
+    }
+
+    .secondary-button {
       display: inline-block;
-      background: #2387f5;
-      color: white;
-      padding: 15px 26px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s;
+      border: 1px solid #35435b;
+      padding: 15px 24px;
+      border-radius: 6px;
+      margin-left: 12px;
+      font-weight: 600;
+      transition: .25s;
     }
 
-    .button:hover {
-      background: #0870df;
-      transform: translateY(-2px);
+    .secondary-button:hover {
+      border-color: var(--blue);
     }
 
-    .services {
-      padding: 85px 8%;
-      text-align: center;
+    .trust-line {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 48px;
+      color: #9baac0;
+      font-size: 13px;
     }
 
-    .services h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
+    .trust-line span::before {
+      content: "✓";
+      color: #55a4ff;
+      margin-right: 8px;
+      font-weight: 800;
     }
 
-    .services > p {
-      color: #aebdd1;
-      margin-bottom: 40px;
+    .section {
+      padding: 100px 0;
     }
 
-    .service-grid {
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      letter-spacing: -1.5px;
+      margin-bottom: 17px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-      text-align: left;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
     .service-card {
-      background: #111d32;
-      border: 1px solid #263954;
-      border-radius: 12px;
-      padding: 28px;
+      padding: 30px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(55,140,255,.5);
+    }
+
+    .service-icon {
+      font-size: 27px;
+      margin-bottom: 22px;
     }
 
     .service-card h3 {
-      color: #58aaff;
+      font-size: 20px;
       margin-bottom: 12px;
     }
 
     .service-card p {
-      color: #b9c7da;
+      color: var(--muted);
       font-size: 14px;
+      line-height: 1.8;
     }
 
-    .contact {
-      text-align: center;
-      padding: 85px 8%;
-      background: #101c30;
+    .industries {
+      background: #0c1525;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
-    .contact h2 {
-      font-size: 36px;
+    .industry-list {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+
+    .industry {
+      padding: 13px 20px;
+      border: 1px solid #2a3b55;
+      border-radius: 7px;
+      color: #d0d9e8;
+      font-size: 14px;
+      background: #111d30;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .process-card {
+      border-top: 2px solid var(--blue);
+      padding-top: 25px;
+    }
+
+    .process-number {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
       margin-bottom: 15px;
     }
 
-    .contact p {
-      color: #b9c7da;
-      margin-bottom: 28px;
+    .process-card h3 {
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta {
+      padding: 85px 30px;
+      background: linear-gradient(120deg, #122d52, #101d33);
+      border: 1px solid #294c79;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(30px, 4vw, 43px);
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      color: #bac9dc;
+      margin-bottom: 30px;
     }
 
     footer {
-      text-align: center;
-      padding: 25px;
-      color: #8798ae;
+      padding: 35px 0;
+      border-top: 1px solid var(--border);
+      margin-top: 90px;
+      color: #8291a8;
       font-size: 13px;
-      border-top: 1px solid #263954;
     }
 
-    @media (max-width: 650px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media(max-width: 800px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      nav a {
-        margin: 0 8px;
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+    }
+
+    @media(max-width: 560px) {
+      header {
+        height: auto;
+        padding: 18px 0;
+      }
+
+      .nav {
+        align-items: flex-start;
+        gap: 17px;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        font-size: 12px;
       }
 
       .hero {
-        padding: 65px 7%;
+        padding: 80px 0;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .secondary-button {
+        margin: 12px 0 0;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-line {
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .section {
+        padding: 70px 0;
       }
     }
   </style>
@@ -180,86 +399,194 @@
 
 <body>
 
-  <header>
-    <div class="logo">BrightPath<span>.</span></div>
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">BrightPath<span>.</span></a>
 
-    <nav>
+    <nav class="nav-links">
       <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="#industries">Industries</a>
+      <a href="#process">Our Process</a>
+      <a href="#contact" class="nav-button">Get a Free Quote</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <section class="hero">
+<main>
+
+<section class="hero">
+  <div class="container">
     <div class="hero-content">
-      <div class="tag">Web Design That Works</div>
+
+      <div class="eyebrow">Web Design for Growing Businesses</div>
 
       <h1>
-        Your Business Deserves
-        <span>A Better Website.</span>
+        Turn More Visitors Into
+        <span>Paying Customers.</span>
       </h1>
 
-      <p>
-        We build modern, professional websites that help local
-        businesses attract customers, build trust, and grow.
+      <p class="hero-description">
+        Your website should do more than look good.
+        BrightPath builds modern, professional websites
+        designed to help local businesses build trust,
+        attract customers, and grow.
       </p>
 
-      <a href="#contact" class="button">Get Your Free Quote</a>
-    </div>
-  </section>
+      <a href="#contact" class="primary-button">
+        Get Your Free Website Quote →
+      </a>
 
-  <section class="services" id="services">
-    <h2>Websites Built for Your Business</h2>
+      <a href="#services" class="secondary-button">
+        Explore Our Services
+      </a>
 
-    <p>Professional web design for businesses ready to grow.</p>
-
-    <div class="service-grid">
-
-      <div class="service-card">
-        <h3>Barbers & Salons</h3>
-        <p>Showcase your work, services, and booking options with a professional website.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Auto Detailing</h3>
-        <p>Display your detailing packages, before-and-after photos, and quote options.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Landscaping</h3>
-        <p>Show potential customers your projects and make requesting estimates easy.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Cleaning Services</h3>
-        <p>Build trust and help customers request cleaning quotes online.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Restaurants</h3>
-        <p>Show menus, locations, hours, and ordering information.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Small Businesses</h3>
-        <p>Give your business a professional online presence that works on every device.</p>
+      <div class="trust-line">
+        <span>Mobile-Friendly Design</span>
+        <span>Built for Local Businesses</span>
+        <span>Personalized Service</span>
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="contact" id="contact">
-    <h2>Ready to Grow Your Business?</h2>
+<section class="section" id="services">
+  <div class="container">
 
-    <p>Let's build a website that works as hard as you do.</p>
+    <div class="section-heading">
+      <div class="eyebrow">What We Do</div>
+      <h2>Everything Your Business Needs Online.</h2>
+      <p>
+        Professional web design focused on creating a
+        better first impression and making it easier
+        for customers to contact your business.
+      </p>
+    </div>
 
-    <a href="mailto:YOUR-EMAIL@example.com" class="button">
-      Contact BrightPath
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">✦</div>
+        <h3>Custom Website Design</h3>
+        <p>Modern websites designed around your brand, services, and business goals.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">↗</div>
+        <h3>Mobile Optimization</h3>
+        <p>Responsive websites that look professional on phones, tablets, and computers.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">◎</div>
+        <h3>Website Redesign</h3>
+        <p>Give an outdated website a fresh, modern look that builds customer confidence.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⌘</div>
+        <h3>Lead Generation</h3>
+        <p>Clear calls to action that help visitors request quotes and contact your business.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">◈</div>
+        <h3>Local SEO Foundations</h3>
+        <p>Build a search-friendly website with clear business information and page structure.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">↻</div>
+        <h3>Website Maintenance</h3>
+        <p>Keep your website updated and working with ongoing support options.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section industries" id="industries">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Who We Help</div>
+      <h2>Built for Businesses Like Yours.</h2>
+      <p>
+        We help local businesses create a stronger online
+        presence and make a great first impression.
+      </p>
+
+      <div class="industry-list">
+        <div class="industry">Barbers & Salons</div>
+        <div class="industry">Auto Detailing</div>
+        <div class="industry">Landscaping</div>
+        <div class="industry">Cleaning Services</div>
+        <div class="industry">Restaurants</div>
+        <div class="industry">Contractors</div>
+        <div class="industry">Small Businesses</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">How It Works</div>
+      <h2>Simple From Start to Finish.</h2>
+      <p>
+        A straightforward process designed to make
+        getting your business online easier.
+      </p>
+    </div>
+
+    <div class="process-grid">
+
+      <div class="process-card">
+        <div class="process-number">01 / DISCOVER</div>
+        <h3>Tell Us About Your Business</h3>
+        <p>We learn about your business, goals, services, and the customers you want to reach.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">02 / DESIGN</div>
+        <h3>We Build Your Website</h3>
+        <p>We create a professional website tailored to your business and your customers.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">03 / LAUNCH</div>
+        <h3>Get Your Business Online</h3>
+        <p>After your approval, we help launch your website and get you ready for visitors.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="container" id="contact">
+  <div class="cta">
+    <div class="eyebrow">Let's Build Something Great</div>
+    <h2>Ready for a Website That Works for You?</h2>
+    <p>Tell us about your business. Let's talk about what's possible.</p>
+
+    <a href="mailto:YOUR-EMAIL@example.com?subject=Free%20Website%20Quote"
+       class="primary-button">
+      Request Your Free Quote →
     </a>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    © 2026 BrightPath Web Design. All rights reserved.
-  </footer>
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <div class="logo">BrightPath<span>.</span></div>
+    <div>© 2026 BrightPath Web Design. All rights reserved.</div>
+  </div>
+</footer>
 
 </body>
 </html>
