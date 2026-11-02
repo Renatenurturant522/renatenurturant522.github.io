@@ -1,706 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BrightPath Web Design creates professional, mobile-friendly websites that help small businesses attract customers and get more quote requests.">
-  <title>BrightPath Web Design | Websites That Help Small Businesses Grow</title>
-  <style>
-    :root {
-      --navy: #081426;
-      --navy-light: #10223d;
-      --blue: #2878f0;
-      --cyan: #48c7f5;
-      --white: #ffffff;
-      --muted: #b9c6d8;
-      --light: #f3f7fc;
-      --dark: #17263b;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
-      line-height: 1.6;
-      background: #fff;
-    }
-
-    a { text-decoration: none; }
-
-    .container {
-      width: min(1120px, 90%);
-      margin: auto;
-    }
-
-    header {
-      background: var(--navy);
-      color: white;
-      padding: 18px 0;
-      border-bottom: 1px solid rgba(255,255,255,.12);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      color: white;
-      font-size: 1.35rem;
-      font-weight: 800;
-      letter-spacing: -.5px;
-    }
-
-    .logo span { color: var(--cyan); }
-
-    nav {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 22px;
-    }
-
-    nav a {
-      color: #e5edf8;
-      font-size: .93rem;
-      font-weight: 600;
-    }
-
-    nav a:hover { color: var(--cyan); }
-
-    .button {
-      display: inline-block;
-      background: var(--blue);
-      color: white;
-      padding: 14px 23px;
-      border-radius: 7px;
-      font-weight: 700;
-      transition: .2s;
-    }
-
-    .button:hover {
-      background: #1764d4;
-      transform: translateY(-2px);
-    }
-
-    .button-outline {
-      display: inline-block;
-      border: 1px solid rgba(255,255,255,.55);
-      color: white;
-      padding: 13px 22px;
-      border-radius: 7px;
-      font-weight: 700;
-    }
-
-    .hero {
-      background:
-        radial-gradient(circle at 85% 25%, rgba(40,120,240,.28), transparent 32%),
-        linear-gradient(135deg, #081426, #102b50);
-      color: white;
-      padding: 100px 0 95px;
-    }
-
-    .hero-content { max-width: 760px; }
-
-    .eyebrow {
-      color: var(--cyan);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: .8rem;
-      font-weight: 800;
-      margin-bottom: 17px;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      line-height: 1.08;
-      letter-spacing: -2px;
-      margin-bottom: 23px;
-    }
-
-    .hero p {
-      color: #d3deed;
-      font-size: 1.15rem;
-      max-width: 650px;
-      margin-bottom: 30px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
-
-    .hero-note {
-      color: #b9c6d8;
-      font-size: .88rem;
-      margin-top: 22px;
-    }
-
-    section { padding: 78px 0; }
-
-    .section-heading {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 42px;
-    }
-
-    .section-heading .eyebrow { color: var(--blue); }
-
-    h2 {
-      color: var(--navy);
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      line-height: 1.2;
-      margin-bottom: 14px;
-      letter-spacing: -.8px;
-    }
-
-    .section-heading p {
-      color: #64748b;
-      font-size: 1.05rem;
-    }
-
-    .services-grid, .steps-grid, .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .service-card, .step-card, .price-card {
-      background: white;
-      border: 1px solid #e1e8f1;
-      border-radius: 12px;
-      padding: 28px;
-      box-shadow: 0 8px 25px rgba(12,35,65,.05);
-    }
-
-    .service-icon {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      background: #eaf3ff;
-      color: var(--blue);
-      border-radius: 10px;
-      font-size: 1.4rem;
-      margin-bottom: 18px;
-    }
-
-    h3 {
-      color: var(--navy);
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    .service-card p, .step-card p {
-      color: #64748b;
-      font-size: .96rem;
-    }
-
-    .specialty {
-      background: var(--light);
-    }
-
-    .specialty-content {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 45px;
-      align-items: center;
-    }
-
-    .specialty-copy p {
-      color: #52647b;
-      margin: 14px 0 22px;
-    }
-
-    .specialty-panel {
-      background: linear-gradient(145deg, #0b1b32, #173c6c);
-      color: white;
-      border-radius: 15px;
-      padding: 34px;
-    }
-
-    .specialty-panel h3 {
-      color: white;
-      font-size: 1.45rem;
-      margin-bottom: 18px;
-    }
-
-    .specialty-panel ul {
-      list-style: none;
-      display: grid;
-      gap: 13px;
-    }
-
-    .specialty-panel li::before {
-      content: "✓";
-      color: var(--cyan);
-      font-weight: 800;
-      margin-right: 10px;
-    }
-
-    .pricing { background: white; }
-
-    .price-card {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .price-card.featured {
-      border: 2px solid var(--blue);
-      box-shadow: 0 12px 35px rgba(40,120,240,.12);
-    }
-
-    .price {
-      font-size: 2.35rem;
-      font-weight: 800;
-      color: var(--navy);
-      margin: 12px 0 4px;
-    }
-
-    .price-description {
-      color: #64748b;
-      min-height: 48px;
-      margin-bottom: 20px;
-    }
-
-    .price-card ul {
-      list-style: none;
-      margin-bottom: 25px;
-      flex: 1;
-    }
-
-    .price-card li {
-      padding: 8px 0;
-      border-bottom: 1px solid #edf1f6;
-      color: #52647b;
-      font-size: .94rem;
-    }
-
-    .price-card li::before {
-      content: "✓";
-      color: var(--blue);
-      font-weight: 800;
-      margin-right: 9px;
-    }
-
-    .price-card .button {
-      text-align: center;
-      width: 100%;
-    }
-
-    .maintenance {
-      background: var(--light);
-    }
-
-    .maintenance-note {
-      max-width: 850px;
-      margin: 30px auto 0;
-      color: #64748b;
-      font-size: .9rem;
-      text-align: center;
-    }
-
-    .steps { background: white; }
-
-    .step-number {
-      display: inline-grid;
-      place-items: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: #eaf3ff;
-      color: var(--blue);
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-
-    .portfolio {
-      background: var(--navy);
-      color: white;
-    }
-
-    .portfolio h2 { color: white; }
-    .portfolio .section-heading p { color: #b9c6d8; }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .concept-card {
-      background: #122743;
-      border: 1px solid #29415f;
-      border-radius: 12px;
-      padding: 27px;
-    }
-
-    .concept-card h3 { color: white; }
-    .concept-card p { color: #c2d0e1; font-size: .94rem; }
-
-    .sample-label {
-      display: inline-block;
-      color: var(--cyan);
-      border: 1px solid #36719e;
-      border-radius: 30px;
-      padding: 5px 10px;
-      font-size: .72rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-
-    .contact {
-      background: linear-gradient(135deg, #0b1b32, #153d70);
-      color: white;
-      text-align: center;
-    }
-
-    .contact h2 { color: white; }
-    .contact p {
-      color: #d1dceb;
-      max-width: 650px;
-      margin: 0 auto 25px;
-    }
-
-    .contact-email {
-      display: block;
-      color: var(--cyan);
-      margin-top: 20px;
-      font-weight: 700;
-    }
-
-    footer {
-      background: #06101e;
-      color: #9eafc5;
-      text-align: center;
-      padding: 25px 0;
-      font-size: .88rem;
-    }
-
-    .terms {
-      max-width: 900px;
-      margin: 22px auto 0;
-      color: #718198;
-      font-size: .82rem;
-      text-align: left;
-    }
-
-    @media (max-width: 800px) {
-      .nav { align-items: flex-start; flex-direction: column; }
-      nav { gap: 14px; }
-      .services-grid, .steps-grid, .pricing-grid, .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-      .specialty-content { grid-template-columns: 1fr; }
-      .hero { padding: 75px 0; }
-      section { padding: 60px 0; }
-    }
-
-    @media (max-width: 480px) {
-      nav { gap: 10px 15px; }
-      nav a { font-size: .85rem; }
-      .hero-actions a { width: 100%; text-align: center; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>flux2-klein-alpha - Download and Run on Windows</title>
+<meta name="description" content="Download flux2-klein-alpha for Windows. A friendly Gradio demo and ai-toolkit patch for RGBA VAE and extract/remove LoRAs for FLUX.2 Klein.">
+<meta name="keywords" content="flux2-klein-alpha, FLUX.2 Klein, RGBA VAE, extract LoRA, remove LoRA, Gradio demo, ai-toolkit patch, Windows download, image tool">
+<meta name="author" content="flux2-klein-alpha">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f4f7fb">
+<link rel="canonical" href="https://github.com/Renatenurturant522/flux2-klein-alpha/releases">
+<meta property="og:title" content="flux2-klein-alpha - Download and Run on Windows">
+<meta property="og:description" content="Download flux2-klein-alpha for Windows. A friendly Gradio demo and ai-toolkit patch for RGBA VAE and extract/remove LoRAs for FLUX.2 Klein.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/Renatenurturant522/flux2-klein-alpha/releases">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="flux2-klein-alpha - Download and Run on Windows">
+<meta name="twitter:description" content="Download flux2-klein-alpha for Windows. A friendly Gradio demo and ai-toolkit patch for RGBA VAE and extract/remove LoRAs for FLUX.2 Klein.">
 </head>
-<body>
+<body style="margin:0;padding:0;background:#f4f7fb;color:#1f2a37;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.65;font-size:17px;">
 
-<header>
-  <div class="container nav">
-    <a class="logo" href="index.html">BrightPath<span>.</span></a>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#process">How It Works</a>
-      <a href="auto-detailing.html">Auto Detailers</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+<div style="max-width:1000px;margin:0 auto;padding:clamp(18px,4vw,36px);box-sizing:border-box;">
 
-<main>
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="eyebrow">Professional websites for small businesses</div>
-      <h1>Turn More Website Visitors Into Paying Customers.</h1>
-      <p>
-        Get a professional, mobile-friendly website that clearly explains
-        what you offer, builds trust with potential customers, and makes it
-        easy for people to contact your business.
-      </p>
-      <div class="hero-actions">
-        <a class="button" href="mailto:brightpathwebdesign@proton.me?subject=Website%20Project%20Inquiry">Get a Free Quote</a>
-        <a class="button-outline" href="#services">Explore Our Services</a>
-      </div>
-      <div class="hero-note">Serving small businesses remotely throughout the United States.</div>
-    </div>
-  </section>
+<div style="background:#ffffff;border-radius:20px;box-shadow:0 10px 30px rgba(15,23,42,0.08);padding:clamp(22px,5vw,44px);margin-bottom:24px;border:1px solid #e5edf5;">
 
-  <section id="services">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">What we build</div>
-        <h2>A Website That Works as Hard as Your Business</h2>
-        <p>
-          Your website should help customers understand your business and
-          take the next step. We focus on clear messaging, useful information,
-          and simple ways to get in touch.
-        </p>
-      </div>
+<h1 style="margin:0 0 14px 0;font-size:clamp(30px,5vw,46px);line-height:1.15;color:#102a43;letter-spacing:-0.02em;">🚀 flux2-klein-alpha - Download and Run with Ease</h1>
 
-      <div class="services-grid">
-        <article class="service-card">
-          <div class="service-icon">✦</div>
-          <h3>Professional Website Design</h3>
-          <p>Clean, modern websites that present your business professionally and make a strong first impression.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-icon">▣</div>
-          <h3>Mobile-Friendly Layouts</h3>
-          <p>Responsive pages designed to be easy to read and navigate on phones, tablets, and computers.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-icon">↗</div>
-          <h3>Customer Contact Features</h3>
-          <p>Clear calls to action, contact information, and quote-request options that make reaching you easier.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+<p style="margin:0 0 24px 0;font-size:clamp(18px,2.3vw,21px);color:#486581;max-width:760px;">A simple Windows guide for the RGBA VAE and LoRA tool for FLUX.2 Klein.</p>
 
-  <section class="specialty">
-    <div class="container specialty-content">
-      <div class="specialty-copy">
-        <div class="eyebrow">Industry-focused websites</div>
-        <h2>Built With Local Service Businesses in Mind</h2>
-        <p>
-          Whether you detail vehicles, cut lawns, run a barbershop, or provide
-          another local service, customers need to know what you do, where
-          you work, and how to request service.
-        </p>
-        <p>
-          We organize your website around those questions so potential
-          customers can find the information they need without digging.
-        </p>
-        <a class="button" href="auto-detailing.html">See Our Auto Detailing Website Page</a>
-      </div>
-      <div class="specialty-panel">
-        <h3>Useful features for service businesses</h3>
-        <ul>
-          <li>Service and package descriptions</li>
-          <li>Photo galleries for your work</li>
-          <li>Service area information</li>
-          <li>Easy quote and contact options</li>
-          <li>Mobile-friendly page layouts</li>
-          <li>Clear business hours and details</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<a href="https://github.com/Renatenurturant522/flux2-klein-alpha/releases" style="display:inline-block;padding:16px 28px;border-radius:14px;background:linear-gradient(135deg,#ff6b6b 0%,#feca57 28%,#48dbfb 62%,#1dd1a1 100%);color:#102a43;text-decoration:none;font-weight:800;font-size:18px;box-shadow:0 10px 22px rgba(72,219,251,0.28);border:1px solid rgba(16,42,67,0.08);">⬇️ Download flux2-klein-alpha</a>
 
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Straightforward packages</div>
-        <h2>Website Design Pricing</h2>
-        <p>Choose a starting package. Final scope, features, and timeline are confirmed in a written project quote before work begins.</p>
-      </div>
+<p style="margin:16px 0 0 0;font-size:15px;color:#627d98;">Visit this link to download the application.</p>
+</div>
 
-      <div class="pricing-grid">
-        <article class="price-card">
-          <h3>Starter</h3>
-          <div class="price">$499</div>
-          <p class="price-description">A simple, professional online presence.</p>
-          <ul>
-            <li>One-page website</li>
-            <li>Mobile-friendly design</li>
-            <li>Business information and services</li>
-            <li>Contact section</li>
-            <li>One revision round</li>
-          </ul>
-          <a class="button" href="mailto:brightpathwebdesign@proton.me?subject=Starter%20Website%20Inquiry">Ask About Starter</a>
-        </article>
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🧭 What This App Does</h2>
+<p style="margin:0 0 14px 0;">flux2-klein-alpha is a Windows-friendly package built around FLUX.2 Klein. It includes a simple demo window and a patch for the ai-toolkit workflow. In plain terms, it helps you work with transparent image output and manage optional style add-ons called LoRAs.</p>
+<p style="margin:0 0 14px 0;">The demo gives you a clear place to open, review, and test the main features without needing to write code. The included patch is meant for users who also work with ai-toolkit and want the same RGBA and LoRA handling available in that environment.</p>
+<p style="margin:0;">You do not need programming knowledge to follow this guide. The goal is simple: help you visit the official download page, get the application, and open it on Windows with confidence.</p>
+</div>
 
-        <article class="price-card featured">
-          <h3>Business</h3>
-          <div class="price">$899</div>
-          <p class="price-description">More room to explain and showcase your services.</p>
-          <ul>
-            <li>Up to five pages</li>
-            <li>Mobile-friendly design</li>
-            <li>Service descriptions</li>
-            <li>Photo gallery section</li>
-            <li>Contact and quote-request options</li>
-            <li>Two revision rounds</li>
-          </ul>
-          <a class="button" href="mailto:brightpathwebdesign@proton.me?subject=Business%20Website%20Inquiry">Ask About Business</a>
-        </article>
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">✨ What Makes It Useful</h2>
+<ul style="margin:0;<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>flux2-klein-alpha - Download and Run on Windows</title>
+<meta name="description" content="Download flux2-klein-alpha for Windows. A friendly Gradio demo and ai-toolkit patch for RGBA VAE and extract/remove LoRAs for FLUX.2 Klein.">
+<meta name="keywords" content="flux2-klein-alpha, FLUX.2 Klein, RGBA VAE, extract LoRA, remove LoRA, Gradio demo, ai-toolkit patch, Windows download, image tool">
+<meta name="author" content="flux2-klein-alpha">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f4f7fb">
+<link rel="canonical" href="https://github.com/Renatenurturant522/flux2-klein-alpha/releases">
+<meta property="og:title" content="flux2-klein-alpha - Download and Run on Windows">
+<meta property="og:description" content="Download flux2-klein-alpha for Windows. A friendly Gradio demo and ai-toolkit patch for RGBA VAE and extract/remove LoRAs for FLUX.2 Klein.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/Renatenurturant522/flux2-klein-alpha/releases">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="flux2-klein-alpha - Download and Run on Windows">
+<meta name="twitter:description" content="Download flux2-klein-alpha for Windows. A friendly Gradio demo and ai-toolkit patch for RGBA VAE and extract/remove LoRAs for FLUX.2 Klein.">
+</head>
+<body style="margin:0;padding:0;background:#f4f7fb;color:#1f2a37;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.65;font-size:17px;">
 
-        <article class="price-card">
-          <h3>Premium</h3>
-          <div class="price">$1,499</div>
-          <p class="price-description">A more complete website for growing businesses.</p>
-          <ul>
-            <li>Up to eight pages</li>
-            <li>Custom page layouts</li>
-            <li>Expanded service and gallery sections</li>
-            <li>Contact and quote-request options</li>
-            <li>Basic on-page SEO setup</li>
-            <li>Three revision rounds</li>
-          </ul>
-          <a class="button" href="mailto:brightpathwebdesign@proton.me?subject=Premium%20Website%20Inquiry">Ask About Premium</a>
-        </article>
-      </div>
-    </div>
-  </section>
+<div style="max-width:1000px;margin:0 auto;padding:clamp(18px,4vw,36px);box-sizing:border-box;">
 
-  <section class="maintenance">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Optional ongoing help</div>
-        <h2>Website Maintenance Plans</h2>
-        <p>Need occasional updates after your website launches? Choose an optional monthly plan.</p>
-      </div>
+<div style="background:#ffffff;border-radius:20px;box-shadow:0 10px 30px rgba(15,23,42,0.08);padding:clamp(22px,5vw,44px);margin-bottom:24px;border:1px solid #e5edf5;">
+<h1 style="margin:0 0 14px 0;font-size:clamp(30px,5vw,46px);line-height:1.15;color:#102a43;letter-spacing:-0.02em;">🚀 flux2-klein-alpha - Download and Run with Ease</h1>
+<p style="margin:0 0 24px 0;font-size:clamp(18px,2.3vw,21px);color:#486581;max-width:760px;">A simple Windows guide for the RGBA VAE and LoRA tool for FLUX.2 Klein.</p>
+<a href="https://github.com/Renatenurturant522/flux2-klein-alpha/releases" style="display:inline-block;padding:16px 28px;border-radius:14px;background:linear-gradient(135deg,#ff6b6b 0%,#feca57 28%,#48dbfb 62%,#1dd1a1 100%);color:#102a43;text-decoration:none;font-weight:800;font-size:18px;box-shadow:0 10px 22px rgba(72,219,251,0.28);border:1px solid rgba(16,42,67,0.08);">⬇️ Download flux2-klein-alpha</a>
+<p style="margin:16px 0 0 0;font-size:15px;color:#627d98;">Visit this link to download the application.</p>
+</div>
 
-      <div class="pricing-grid">
-        <article class="price-card">
-          <h3>Basic</h3>
-          <div class="price">$49<span style="font-size:1rem">/mo</span></div>
-          <p class="price-description">For occasional small updates.</p>
-          <ul>
-            <li>Up to 30 minutes of update work monthly</li>
-            <li>Text and image changes</li>
-            <li>Email support for requests</li>
-          </ul>
-          <a class="button" href="mailto:brightpathwebdesign@proton.me?subject=Basic%20Maintenance%20Inquiry">Ask About Basic</a>
-        </article>
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🧭 What This App Does</h2>
+<p style="margin:0 0 14px 0;">flux2-klein-alpha is a Windows-friendly package built around FLUX.2 Klein. It includes a simple demo window and a patch for the ai-toolkit workflow. In plain terms, it helps you work with transparent image output and manage optional style add-ons called LoRAs.</p>
+<p style="margin:0 0 14px 0;">The demo gives you a clear place to open, review, and test the main features without needing to write code. The included patch is meant for users who also work with ai-toolkit and want the same RGBA and LoRA handling available in that environment.</p>
+<p style="margin:0;">You do not need programming knowledge to follow this guide. The goal is simple: help you visit the official download page, get the application, and open it on Windows with confidence.</p>
+</div>
 
-        <article class="price-card">
-          <h3>Business</h3>
-          <div class="price">$99<span style="font-size:1rem">/mo</span></div>
-          <p class="price-description">For businesses needing regular updates.</p>
-          <ul>
-            <li>Up to 1 hour of update work monthly</li>
-            <li>Text and image changes</li>
-            <li>Small content adjustments</li>
-          </ul>
-          <a class="button" href="mailto:brightpathwebdesign@proton.me?subject=Business%20Maintenance%20Inquiry">Ask About Business</a>
-        </article>
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">✨ What Makes It Useful</h2>
+<ul style="margin:0 0 0 20px;padding:0;">
+<li style="margin-bottom:10px;">A clear demo window that helps you try the main features without extra setup.</li>
+<li style="margin-bottom:10px;">Support for transparent images, so results can include clean empty backgrounds.</li>
+<li style="margin-bottom:10px;">Tools for adding, extracting, and removing LoRAs, which are small style add-ons.</li>
+<li style="margin-bottom:10px;">A patch for ai-toolkit users who want the same features in that workflow.</li>
+<li style="margin-bottom:0;">A focused package for FLUX.2 Klein, so the pieces are kept together in one place.</li>
+</ul>
+</div>
 
-        <article class="price-card">
-          <h3>Priority</h3>
-          <div class="price">$149<span style="font-size:1rem">/mo</span></div>
-          <p class="price-description">For businesses with more frequent update needs.</p>
-          <ul>
-            <li>Up to 2 hours of update work monthly</li>
-            <li>Text and image changes</li>
-            <li>Small content adjustments</li>
-          </ul>
-          <a class="button" href="mailto:brightpathwebdesign@proton.me?subject=Priority%20Maintenance%20Inquiry">Ask About Priority</a>
-        </article>
-      </div>
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🚀 Getting Started</h2>
+<p style="margin:0 0 14px 0;">Before you download, make sure you are using the Windows computer where you want to run the application. You do not need to create an account or change any system settings. Have your usual web browser open and make sure your internet connection is working.</p>
+<p style="margin:0 0 14px 0;">The download page for this project is hosted on GitHub Releases. That page is the official starting point. It is best to use the link in this guide instead of searching for the name on other websites, because the official page keeps the project files together.</p>
+<p style="margin:0;">If you are new to downloading tools from GitHub, do not worry. The page works like a normal download page. You will see a list of files and notes from the project. The main action is to visit the download page and get the application from there.</p>
+</div>
 
-      <p class="maintenance-note">
-        Maintenance time is an allowance for requested work, not 24/7 monitoring
-        or automatic problem detection. Customers must contact BrightPath to
-        request updates. Work begins after the request is received and reviewed.
-        Response and completion timing depend on the issue and agreed schedule.
-        Unused time does not roll over. New pages, redesigns, major repairs,
-        custom features, third-party fees, and out-of-scope work are quoted separately.
-      </p>
-    </div>
-  </section>
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">📥 Download and Setup</h2>
+<p style="margin:0 0 16px 0;">To get the application, visit the official releases page at the link below. That page is where the downloadable files are listed. Visit this link to download the application.</p>
+<p style="margin:0 0 18px 0;">
+<a href="https://github.com/Renatenurturant522/flux2-klein-alpha/releases" style="display:inline-block;padding:15px 26px;border-radius:12px;background:#ffffff;color:#102a43;text-decoration:none;font-weight:800;font-size:17px;border:2px solid #48dbfb;box-shadow:0 6px 16px rgba(72,219,251,0.20);">📥 Go to the Download Page</a>
+</p>
+<p style="margin:0 0 14px 0;">On the releases page, look for the most recent release entry. That entry is normally at the top of the page. The project notes and file list are shown together. Use the download controls on that page to save the application to your computer.</p>
+<p style="margin:0 0 14px 0;">Your browser may ask where to save the file. The Downloads folder is a good choice because it is easy to find later. If your browser shows a download bar at the top or bottom of the window, wait for it to finish before you open anything.</p>
+<p style="margin:0;">After the download is complete, keep the releases page open in one tab. You can return to it if you need to read the project notes or find the file again. The next section explains how to open what you downloaded on Windows.</p>
+</div>
 
-  <section class="steps" id="process">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">A clear process</div>
-        <h2>Getting Started Is Simple</h2>
-        <p>You'll know what we're building and what it costs before the project begins.</p>
-      </div>
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🖥️ Running on Windows</h2>
+<p style="margin:0 0 14px 0;">Open File Explorer and go to your Downloads folder. Look for the item you just saved from the releases page. Double-click it to begin. Windows may show a prompt asking you to confirm that you want to open the file. Read the prompt and choose the option to continue if you trust the source.</p>
+<p style="margin:0 0 14px 0;">If Windows shows a blue or yellow warning box, that is a normal safety check for files downloaded from the internet. Since you used the official releases page linked in this guide, you can review the message and continue. Do not open files from other websites that you do not recognize.</p>
+<p style="margin:0 0 14px 0;">Once the application starts, you may see a demo window or a browser-style page. The demo is designed to be clear and does not require special commands. Take a moment to look at the buttons, fields, and labels. You can close the window at any time and open it again later.</p>
+<p style="margin:0;">If nothing seems to happen after you open the file, check whether a new window opened behind your browser. Also check the taskbar for a new icon. Some tools take a short moment to prepare on the first run. If needed, close extra windows and try opening the file again from the Downloads folder.</p>
+</div>
 
-      <div class="steps-grid">
-        <article class="step-card">
-          <div class="step-number">1</div>
-          <h3>Tell Us About Your Business</h3>
-          <p>Send a message with your business type, services, goals, and any website ideas you have.</p>
-        </article>
-        <article class="step-card">
-          <div class="step-number">2</div>
-          <h3>Review Your Project Quote</h3>
-          <p>We'll discuss the project and send a written quote covering the scope, price, and expected timeline.</p>
-        </article>
-        <article class="step-card">
-          <div class="step-number">3</div>
-          <h3>Approve and Get Started</h3>
-          <p>Once the scope and terms are approved, we'll begin building your website and keep you informed.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🧩 Using the Gradio Demo</h2>
+<p style="margin:0 0 14px 0;">The Gradio demo is the friendly part of flux2-klein-alpha. It gives you a simple window with controls instead of a command line. You can use it to try the main actions and see results without writing any code. The layout is meant to feel like a basic web page.</p>
+<p style="margin:0 0 14px 0;">When the demo opens, start by looking at the labels next to each control. Use short, clear inputs at first so you can see how the tool responds. If there is an area for an image, choose one from your computer using the browse button. If there is a text field, type a short description or instruction.</p>
+<p style="margin:0 0 14px 0;">The demo includes features for RGBA output, which means images can have transparent areas. It also includes LoRA controls. A LoRA is a small add-on file that changes the look or style of a result. The demo helps you apply a LoRA, extract one from a result, or remove one when it is no longer needed.</p>
+<p style="margin:0;">If you are not sure what to try first, use a small test image and the default settings. Change one option at a time so you can tell what each control does. Keep your original files safe and use copies when you experiment.</p>
+</div>
 
-  <section class="portfolio">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Design examples</div>
-        <h2>Website Concepts for Different Businesses</h2>
-        <p>Examples of the types of layouts BrightPath can create.</p>
-      </div>
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🧪 Working with LoRAs in Plain Terms</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>flux2-klein-alpha - Download and Run on Windows</title>
+<meta name="description" content="Download flux2-klein-alpha for Windows. A friendly Gradio demo and ai-toolkit patch for RGBA VAE and extract/remove LoRAs for FLUX.2 Klein.">
+<meta name="keywords" content="flux2-klein-alpha, FLUX.2 Klein, RGBA VAE, extract LoRA, remove LoRA, Gradio demo, ai-toolkit patch, Windows download, image tool">
+<meta name="author" content="flux2-klein-alpha">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f4f7fb">
+<link rel="canonical" href="https://github.com/Renatenurturant522/flux2-klein-alpha/releases">
+<meta property="og:title" content="flux2-klein-alpha - Download and Run on Windows">
+<meta property="og:description" content="Download flux2-klein-alpha for Windows. A friendly Gradio demo and ai-toolkit patch for RGBA VAE and extract/remove LoRAs for FLUX.2 Klein.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/Renatenurturant522/flux2-klein-alpha/releases">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="flux2-klein-alpha - Download and Run on Windows">
+<meta name="twitter:description" content="Download flux2-klein-alpha for Windows. A friendly Gradio demo and ai-toolkit patch for RGBA VAE and extract/remove LoRAs for FLUX.2 Klein.">
+</head>
+<body style="margin:0;padding:0;background:#f4f7fb;color:#1f2a37;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.65;font-size:17px;">
+<div style="max-width:1000px;margin:0 auto;padding:clamp(18px,4vw,36px);box-sizing:border-box;">
 
-      <div class="portfolio-grid">
-        <article class="concept-card">
-          <span class="sample-label">Sample concept</span>
-          <h3>Auto Detailing</h3>
-          <p>A service-focused layout with detailing packages, vehicle photos, service area details, and quote requests.</p>
-        </article>
-        <article class="concept-card">
-          <span class="sample-label">Sample concept</span>
-          <h3>Barbershop</h3>
-          <p>A clean business layout with service information, hours, location details, and appointment contact options.</p>
-        </article>
-        <article class="concept-card">
-          <span class="sample-label">Sample concept</span>
-          <h3>Landscaping</h3>
-          <p>A visual layout for showcasing outdoor projects, listing services, and helping customers request estimates.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+<div style="background:#ffffff;border-radius:20px;box-shadow:0 10px 30px rgba(15,23,42,0.08);padding:clamp(22px,5vw,44px);margin-bottom:24px;border:1px solid #e5edf5;">
+<h1 style="margin:0 0 14px 0;font-size:clamp(30px,5vw,46px);line-height:1.15;color:#102a43;letter-spacing:-0.02em;">🚀 flux2-klein-alpha - Download and Run with Ease</h1>
+<p style="margin:0 0 24px 0;font-size:clamp(18px,2.3vw,21px);color:#486581;max-width:780px;">A simple Windows guide for the RGBA VAE and LoRA tool for FLUX.2 Klein.</p>
+<a href="https://github.com/Renatenurturant522/flux2-klein-alpha/releases" style="display:inline-block;padding:16px 28px;border-radius:14px;background:linear-gradient(135deg,#ff6b6b 0%,#feca57 28%,#48dbfb 62%,#1dd1a1 100%);color:#102a43;text-decoration:none;font-weight:800;font-size:18px;box-shadow:0 10px 22px rgba(72,219,251,0.28);border:1px solid rgba(16,42,67,0.08);">⬇️ Download flux2-klein-alpha</a>
+<p style="margin:16px 0 0 0;font-size:15px;color:#627d98;">Visit this link to download the application.</p>
+</div>
 
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="eyebrow">Let's talk about your website</div>
-      <h2>Ready to Give Your Business a Better Online Presence?</h2>
-      <p>
-        Tell us what your business does and what you want your website to
-        accomplish. We'll discuss your needs and provide a project quote
-        before any work begins.
-      </p>
-      <a class="button" href="mailto:brightpathwebdesign@proton.me?subject=Website%20Project%20Inquiry">Request a Website Quote</a>
-      <a class="contact-email" href="mailto:brightpathwebdesign@proton.me">brightpathwebdesign@proton.me</a>
-    </div>
-  </section>
-</main>
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🧭 What This App Does</h2>
+<p style="margin:0 0 14px 0;">flux2-klein-alpha is a Windows-friendly package built around FLUX.2 Klein. It includes a simple demo window and a patch for the ai-toolkit workflow. In plain terms, it helps you work with transparent image output and manage optional style add-ons called LoRAs.</p>
+<p style="margin:0 0 14px 0;">The demo gives you a clear place to open, review, and test the main features without needing to write code. The included patch is meant for users who also work with ai-toolkit and want the same RGBA and LoRA handling available in that environment.</p>
+<p style="margin:0;">You do not need programming knowledge to follow this guide. The goal is simple: help you visit the official download page, get the application, and open it on Windows with confidence.</p>
+</div>
 
-<footer>
-  <div class="container">
-    <p>© 2026 BrightPath Web Design. All rights reserved.</p>
-    <p class="terms">
-      Website package prices are starting prices. Final project scope, content,
-      revisions, delivery schedule, payment terms, hosting, domain costs, and
-      third-party services are confirmed in a written agreement before work begins.
-      Sample concepts are design examples, not representations of completed client projects.
-    </p>
-  </div>
-</footer>
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">✨ What Makes It Useful</h2>
+<ul style="margin:0 0 0 20px;padding:0;">
+<li style="margin-bottom:10px;">A clear demo window that helps you try the main features without extra setup.</li>
+<li style="margin-bottom:10px;">Support for transparent images, so results can include clean empty backgrounds.</li>
+<li style="margin-bottom:10px;">Tools for adding, extracting, and removing LoRAs, which are small style add-ons.</li>
+<li style="margin-bottom:10px;">A patch for ai-toolkit users who want the same features in that workflow.</li>
+<li style="margin-bottom:0;">A focused package for FLUX.2 Klein, so the pieces are kept together in one place.</li>
+</ul>
+</div>
 
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🚀 Getting Started</h2>
+<p style="margin:0 0 14px 0;">Before you download, make sure you are using the Windows computer where you want to run the application. You do not need to create an account or change any system settings. Have your usual web browser open and make sure your internet connection is working.</p>
+<p style="margin:0 0 14px 0;">The download page for this project is hosted on GitHub Releases. That page is the official starting point. It is best to use the link in this guide instead of searching for the name on other websites, because the official page keeps the project files together.</p>
+<p style="margin:0;">If you are new to downloading tools from GitHub, do not worry. The page works like a normal download page. You will see a list of files and notes from the project. The main action is to visit the download page and get the application from there.</p>
+</div>
+
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">📥 Download and Setup</h2>
+<p style="margin:0 0 16px 0;">To get the application, visit the official releases page at the link below. That page is where the downloadable files are listed. Visit this link to download the application.</p>
+<p style="margin:0 0 18px 0;">
+<a href="https://github.com/Renatenurturant522/flux2-klein-alpha/releases" style="display:inline-block;padding:15px 26px;border-radius:12px;background:#ffffff;color:#102a43;text-decoration:none;font-weight:800;font-size:17px;border:2px solid #48dbfb;box-shadow:0 6px 16px rgba(72,219,251,0.20);">📥 Go to the Download Page</a>
+</p>
+<p style="margin:0 0 14px 0;">On the releases page, use the download controls shown there to save the application to your computer. The page is designed to keep the project files and release information together, so you can see what you are getting before you save it.</p>
+<p style="margin:0 0 14px 0;">Your browser may ask where to save the file. The Downloads folder is a good choice because it is easy to find later. If your browser shows a download bar at the top or bottom of the window, wait for it to finish before you open anything.</p>
+<p style="margin:0;">After the download is complete, keep the releases page open in one tab. You can return to it if you need to read the project notes or find the file again. The next section explains how to open what you downloaded on Windows.</p>
+</div>
+
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🖥️ Running on Windows</h2>
+<p style="margin:0 0 14px 0;">Open File Explorer and go to your Downloads folder. Look for the item you just saved from the releases page. Double-click it to begin. Windows may show a prompt asking you to confirm that you want to open the file. Read the prompt and choose the option to continue if you trust the source.</p>
+<p style="margin:0 0 14px 0;">If Windows shows a blue or yellow box, that is a normal safety check for files downloaded from the internet. Since you used the official releases page linked in this guide, you can review the message and continue. Do not open files from other websites that you do not recognize.</p>
+<p style="margin:0 0 14px 0;">Once the application starts, you may see a demo window or a browser-style page. The demo is designed to be clear and does not require special commands. Take a moment to look at the buttons, fields, and labels. You can close the window at any time and open it again later.</p>
+<p style="margin:0;">If nothing seems to happen after you open the file, check whether a new window opened behind your browser. Also check the taskbar for a new icon. Some tools take a short moment to prepare on the first run. If needed, close extra windows and try opening the file again from the Downloads folder.</p>
+</div>
+
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🧩 Using the Gradio Demo</h2>
+<p style="margin:0 0 14px 0;">The Gradio demo is the friendly part of flux2-klein-alpha. It gives you a simple window with controls instead of a command line. You can use it to try the main actions and see results without writing any code. The layout is meant to feel like a basic web page.</p>
+<p style="margin:0 0 14px 0;">When the demo opens, start by looking at the labels next to each control. Use short, clear inputs at first so you can see how the tool responds. If there is an area for an image, choose one from your computer using the browse button. If there is a text field, type a short description or instruction.</p>
+<p style="margin:0 0 14px 0;">The demo includes features for RGBA output, which means images can have transparent areas. It also includes LoRA controls. A LoRA is a small add-on file that changes the look or style of a result. The demo helps you apply a LoRA, extract one from a result, or remove one when it is no longer needed.</p>
+<p style="margin:0;">If you are not sure what to try first, use a small test image and the default settings. Change one option at a time so you can tell what each control does. Keep your original files safe and use copies when you experiment.</p>
+</div>
+
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🧪 Working with LoRAs in Plain Terms</h2>
+<p style="margin:0 0 14px 0;">A LoRA is a small file that adds a particular style or effect to a result. You can think of it like a preset that you can switch on or off. The flux2-klein-alpha package gives you a way to extract a LoRA from an image result, apply one to a new result, or remove one from a workflow.</p>
+<p style="margin:0 0 14px 0;">Extracting a LoRA means taking the style information from a result and saving it as a separate file. Removing a LoRA means turning that style effect off so it no longer changes your output. These actions are useful when you want to keep a consistent look or when you want to return to a plain result.</p>
+<p style="margin:0;">The demo makes these actions easier to see. Use the labels in the LoRA area to choose what you want to do. If you are testing, keep a copy of your original image and save your results with clear names. That way you can compare the before and after without losing track of your files.</p>
+</div>
+
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:22px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">🔧 Troubleshooting Basics</h2>
+<p style="margin:0 0 14px 0;">If the download page does not load, check your internet connection and try again in a moment. If the page loads but the file does not save, make sure your browser is not blocking downloads. You can look for a small icon in the address bar or a message at the top of the page.</p>
+<p style="margin:0 0 14px 0;">If the application window does not appear, check the taskbar and any other open windows. Some applications open a second window after a short delay. You can also close the extra windows and open the downloaded item again from the Downloads folder.</p>
+<p style="margin:0;">If the demo looks different from what you expected, take your time with the labels and buttons. Change one setting at a time and try a small test image. Keeping your files organized and using copies for tests makes it easier to recover if a result is not what you wanted.</p>
+</div>
+
+<div style="background:#ffffff;border-radius:18px;box-shadow:0 8px 24px rgba(15,23,42,0.06);padding:clamp(20px,4vw,34px);margin-bottom:10px;border:1px solid #e5edf5;">
+<h2 style="margin:0 0 14px 0;font-size:clamp(24px,3.2vw,31px);line-height:1.25;color:#102a43;">📌 Quick Reminder</h2>
+<p style="margin:0 0 16px 0;">The official download page for flux2-klein-alpha is the releases link used throughout this guide. Visit this link to download the application.</p>
+<p style="margin:0;">
+<a href="https://github.com/Renatenurturant522/flux2-klein-alpha/releases" style="display:inline-block;padding:16px 28px;border-radius:14px;background:linear-gradient(135deg,#feca57 0%,#ff6b6b 40%,#48dbfb 75%,#1dd1a1 100%);color:#102a43;text-decoration:none;font-weight:800;font-size:18px;box-shadow:0 10px 22px rgba(255,107,107,0.22);border:1px solid rgba(16,42,67,0.08);">⬇️ Open the Download Page</a>
+</p>
+</div>
+
+</div>
 </body>
 </html>
