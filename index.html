@@ -4,75 +4,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BrightPath Web Design creates professional websites that help small businesses attract customers and grow.">
-<title>BrightPath Web Design | Websites That Grow Your Business</title>
+<meta name="description" content="BrightPath Web Design creates professional websites for small businesses. Get a website designed to attract customers and grow your business.">
+<title>BrightPath Web Design | Websites That Grow Businesses</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#07111f;--panel:#101e31;--blue:#3987ff;--light:#a9caff;--white:#f5f8ff;--muted:#a6b4c8}
+:root{
+--bg:#07111f;
+--panel:#101e31;
+--blue:#3987ff;
+--white:#f5f8ff;
+--muted:#a6b4c8;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--white);line-height:1.65}
 a{text-decoration:none;color:inherit}
 .container{width:min(1120px,90%);margin:auto}
-header{position:sticky;top:0;z-index:10;background:rgba(7,17,31,.94);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}
+header{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.95);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}
 nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:Manrope,sans-serif;font-size:21px;font-weight:800;letter-spacing:-1px}
+.logo{font-family:Manrope,sans-serif;font-size:23px;font-weight:800;letter-spacing:-1px}
 .logo span{color:var(--blue)}
-.navlinks{display:flex;align-items:center;gap:28px;color:#c1ccdc;font-size:14px}
-.navlinks a:hover{color:white}
+.navlinks{display:flex;align-items:center;gap:27px;color:#c1ccdc;font-size:14px}
+.navlinks a:hover{color:#70aaff}
 .btn{display:inline-block;background:var(--blue);color:white;padding:13px 21px;border-radius:9px;font-weight:700;font-size:14px;transition:.2s}
 .btn:hover{background:#5a9aff;transform:translateY(-2px)}
 .btn-outline{border:1px solid #ffffff35;background:transparent}
-.hero{padding:105px 0 95px;background:radial-gradient(ellipse at 75% 25%,#17437b55,transparent 45%),linear-gradient(135deg,#07111f,#0b1c32)}
-.eyebrow{color:#8dbaff;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800;margin-bottom:18px}
+.hero{padding:110px 0 95px;background:radial-gradient(ellipse at 75% 25%,#17437b66,transparent 45%),linear-gradient(135deg,#07111f,#0b1c32)}
+.eyebrow{color:#8dbaff;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800;margin-bottom:17px}
 h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.15;letter-spacing:-1px}
-h1{font-size:clamp(42px,6vw,68px);max-width:760px;margin-bottom:22px}
+h1{font-size:clamp(42px,6vw,68px);max-width:780px;margin-bottom:22px}
 h1 span{color:#70aaff}
-.hero p{max-width:610px;color:var(--muted);font-size:18px;margin-bottom:30px}
+.hero p{max-width:620px;color:var(--muted);font-size:18px;margin-bottom:30px}
 .hero-actions{display:flex;gap:13px;flex-wrap:wrap}
 .trust{display:flex;gap:25px;flex-wrap:wrap;margin-top:42px;color:#b7c5d8;font-size:13px}
 .trust span:before{content:"✓";color:#68aaff;margin-right:8px;font-weight:800}
 section{padding:85px 0}
-.section-head{max-width:680px;margin-bottom:38px}
+.soft{background:#0a1728}
+.section-head{max-width:690px;margin-bottom:38px}
 .section-head h2{font-size:clamp(31px,4vw,43px);margin-bottom:14px}
 .section-head p{color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{background:var(--panel);border:1px solid #ffffff12;border-radius:15px;padding:27px}
 .card h3{font-size:20px;margin:13px 0 9px}
 .card p{color:var(--muted);font-size:14px}
 .card-icon{font-size:27px}
-.soft{background:#0a1728}
 .portfolio-card{padding:0;overflow:hidden}
-.mock{height:205px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
-.mock-bar{height:9px;width:75%;background:#ffffffa0;border-radius:10px}
-.mock-line{height:6px;width:54%;background:#ffffff55;border-radius:10px;margin-top:9px}
-.mock-button{width:95px;height:25px;border-radius:5px;background:#ffffffdd;margin-top:17px}
-.mock-window{background:#ffffff12;border:1px solid #ffffff35;border-radius:9px;padding:13px;width:75%;backdrop-filter:blur(5px)}
-.barber{background:linear-gradient(135deg,#211c1b,#875c3b)}
-.detail{background:linear-gradient(135deg,#101b2b,#2872a1)}
-.landscape{background:linear-gradient(135deg,#173528,#5c9a60)}
-.mock-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#ffffffc9}
+.preview{height:245px;position:relative;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;padding:18px}
+.preview:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.78))}
+.preview-window{position:relative;z-index:1;width:100%;max-width:330px;background:#101827ed;border:1px solid #ffffff45;border-radius:9px;overflow:hidden;box-shadow:0 15px 40px #0008}
+.preview-top{height:23px;background:#e7edf6;display:flex;align-items:center;gap:4px;padding:0 9px}
+.dot{width:6px;height:6px;background:#8b9aad;border-radius:50%}
+.preview-content{padding:19px;text-align:center}
+.preview-content small{font-size:9px;letter-spacing:2px;color:#9fc3ff;text-transform:uppercase}
+.preview-content strong{display:block;font-family:Manrope,sans-serif;font-size:22px;line-height:1.1;margin:9px 0}
+.preview-content p{font-size:10px;color:#c0c9d6}
+.preview-action{display:inline-block;margin-top:12px;background:#3987ff;color:white;border-radius:4px;padding:6px 12px;font-size:9px;font-weight:700}
+.barber{background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=85')}
+.detail{background-image:url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1000&q=85')}
+.landscape{background-image:url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1000&q=85')}
 .portfolio-info{padding:23px}
-.portfolio-info h3{margin:0 0 8px}
-.portfolio-info p{margin-bottom:14px}
-.sample-tag{display:inline-block;font-size:11px;color:#a9caff;border:1px solid #3987ff70;border-radius:20px;padding:4px 9px}
+.portfolio-info h3{margin:12px 0 8px}
+.portfolio-info p{margin-bottom:17px}
+.sample-tag{display:inline-block;font-size:10px;color:#a9caff;border:1px solid #3987ff70;border-radius:20px;padding:4px 9px}
+.text-link{color:#83b5ff;font-size:13px;font-weight:700}
 .portfolio-note{font-size:12px;color:#8fa2bb;margin-top:22px}
-.process-number{font-size:31px;color:#70aaff;font-family:Manrope;font-weight:800}
 .industries{display:flex;flex-wrap:wrap;gap:11px}
 .industries span{border:1px solid #ffffff20;border-radius:30px;padding:10px 16px;color:#d0d9e7;font-size:14px}
+.process-number{font-size:31px;color:#70aaff;font-family:Manrope;font-weight:800}
 .cta{background:linear-gradient(120deg,#123d73,#1763b6);border-radius:20px;padding:55px;text-align:center}
 .cta h2{font-size:clamp(30px,4vw,43px);margin-bottom:15px}
 .cta p{color:#d5e5fa;margin:0 auto 25px;max-width:580px}
 .cta .btn{background:white;color:#123d73}
 footer{padding:35px 0;border-top:1px solid #ffffff15;color:#91a2b9;font-size:13px}
-.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:760px){.navlinks{gap:13px;font-size:12px}.navlinks .nav-quote{display:none}.cards{grid-template-columns:1fr}.hero{padding:75px 0}.cta{padding:38px 22px}}
-@media(max-width:430px){.navlinks a:nth-child(2){display:none}.logo{font-size:18px}}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer p{margin-top:6px}
+@media(max-width:760px){
+.navlinks{gap:13px;font-size:12px}
+.navlinks .nav-quote{display:none}
+.cards{grid-template-columns:1fr}
+.hero{padding:75px 0}
+.cta{padding:38px 22px}
+}
+@media(max-width:430px){
+.navlinks a:nth-child(2){display:none}
+.logo{font-size:18px}
+}
 </style>
 </head>
+
 <body>
+
 <header>
 <div class="container">
 <nav>
@@ -80,7 +104,7 @@ footer{padding:35px 0;border-top:1px solid #ffffff15;color:#91a2b9;font-size:13p
 <div class="navlinks">
 <a href="#services">Services</a>
 <a href="#portfolio">Portfolio</a>
-<a href="#process">How It Works</a>
+<a href="#process">Our Process</a>
 <a class="btn nav-quote" href="mailto:brightpathwebdesign@proton.me?subject=Free%20Website%20Quote">Get a Quote</a>
 </div>
 </nav>
@@ -88,16 +112,21 @@ footer{padding:35px 0;border-top:1px solid #ffffff15;color:#91a2b9;font-size:13p
 </header>
 
 <main>
+
 <div class="hero">
 <div class="container">
 <div class="eyebrow">Web Design for Small Businesses</div>
 <h1>Turn More Visitors Into <span>Paying Customers.</span></h1>
-<p>Your website should do more than look good. BrightPath Web Design builds professional, mobile-friendly websites that help small businesses earn trust, attract leads, and grow.</p>
+<p>Your website should do more than look good. We build professional, mobile-friendly websites that help small businesses earn trust, attract leads, and grow.</p>
 <div class="hero-actions">
 <a class="btn" href="mailto:brightpathwebdesign@proton.me?subject=Free%20Website%20Quote">Get Your Free Website Quote →</a>
 <a class="btn btn-outline" href="#portfolio">Explore Our Work</a>
 </div>
-<div class="trust"><span>Built for small businesses</span><span>Mobile-friendly design</span><span>Focused on getting leads</span></div>
+<div class="trust">
+<span>Designed for small businesses</span>
+<span>Mobile-friendly websites</span>
+<span>Focused on getting leads</span>
+</div>
 </div>
 </div>
 
@@ -106,7 +135,7 @@ footer{padding:35px 0;border-top:1px solid #ffffff15;color:#91a2b9;font-size:13p
 <div class="section-head">
 <div class="eyebrow">What We Do</div>
 <h2>Everything Your Business Needs Online</h2>
-<p>Clear messaging, professional design, and useful features that make it easier for customers to choose your business.</p>
+<p>Professional design, clear messaging, and useful features that make it easier for customers to choose your business.</p>
 </div>
 <div class="cards">
 <div class="card"><div class="card-icon">✦</div><h3>Custom Website Design</h3><p>A professional website designed to match your business and make a strong first impression.</p></div>
@@ -123,33 +152,74 @@ footer{padding:35px 0;border-top:1px solid #ffffff15;color:#91a2b9;font-size:13p
 <div class="container">
 <div class="section-head">
 <div class="eyebrow">Portfolio Concepts</div>
-<h2>See What Your Business Could Look Like Online</h2>
-<p>Here are three sample website concepts showing the kind of professional online presence we can create for local businesses.</p>
+<h2>Imagine What Your Business Could Look Like Online</h2>
+<p>Explore a few sample design directions for the kinds of local businesses we help. Each concept is designed to make a strong first impression and encourage customers to take action.</p>
 </div>
+
 <div class="cards">
+
 <div class="card portfolio-card">
-<div class="mock barber">
-<div class="mock-label">The Modern Chair · Barbershop</div>
-<div class="mock-window"><div class="mock-bar"></div><div class="mock-line"></div><div class="mock-button"></div></div>
+<div class="preview barber">
+<div class="preview-window">
+<div class="preview-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+<div class="preview-content">
+<small>The Modern Chair</small>
+<strong>LOOK SHARP.<br>FEEL CONFIDENT.</strong>
+<p>Premium cuts. Classic style. Your neighborhood barber.</p>
+<span class="preview-action">BOOK YOUR APPOINTMENT</span>
 </div>
-<div class="portfolio-info"><span class="sample-tag">Sample concept</span><h3>Barbershop Website</h3><p>A bold, stylish design with services, shop details, and clear appointment calls to action.</p></div>
 </div>
+</div>
+<div class="portfolio-info">
+<span class="sample-tag">Sample concept</span>
+<h3>Modern Barbershop</h3>
+<p>A bold, stylish website concept with appointment-focused messaging and a premium look.</p>
+<a class="text-link" href="mailto:brightpathwebdesign@proton.me?subject=Barbershop%20Website%20Design">Build a website like this →</a>
+</div>
+</div>
+
 <div class="card portfolio-card">
-<div class="mock detail">
-<div class="mock-label">Apex Auto Care · Detailing</div>
-<div class="mock-window"><div class="mock-bar"></div><div class="mock-line"></div><div class="mock-button"></div></div>
+<div class="preview detail">
+<div class="preview-window">
+<div class="preview-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+<div class="preview-content">
+<small>Apex Auto Care</small>
+<strong>BRING BACK<br>THE SHOWROOM SHINE.</strong>
+<p>Premium detailing. Exceptional attention to detail.</p>
+<span class="preview-action">GET A FREE QUOTE</span>
 </div>
-<div class="portfolio-info"><span class="sample-tag">Sample concept</span><h3>Auto Detailing Website</h3><p>A polished design that highlights detailing packages, vehicle care, and quote requests.</p></div>
 </div>
+</div>
+<div class="portfolio-info">
+<span class="sample-tag">Sample concept</span>
+<h3>Premium Auto Detailing</h3>
+<p>A polished website concept that highlights services, vehicle care, and quote requests.</p>
+<a class="text-link" href="mailto:brightpathwebdesign@proton.me?subject=Auto%20Detailing%20Website%20Design">Build a website like this →</a>
+</div>
+</div>
+
 <div class="card portfolio-card">
-<div class="mock landscape">
-<div class="mock-label">Evergreen Outdoor · Landscaping</div>
-<div class="mock-window"><div class="mock-bar"></div><div class="mock-line"></div><div class="mock-button"></div></div>
+<div class="preview landscape">
+<div class="preview-window">
+<div class="preview-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+<div class="preview-content">
+<small>Evergreen Outdoor</small>
+<strong>YOUR OUTDOORS.<br>OUR PASSION.</strong>
+<p>Beautiful landscapes. Reliable local service.</p>
+<span class="preview-action">REQUEST AN ESTIMATE</span>
 </div>
-<div class="portfolio-info"><span class="sample-tag">Sample concept</span><h3>Landscaping Website</h3><p>A clean, welcoming design that showcases outdoor services and makes estimates easy to request.</p></div>
 </div>
 </div>
-<p class="portfolio-note">These are illustrative sample concepts, not completed client projects.</p>
+<div class="portfolio-info">
+<span class="sample-tag">Sample concept</span>
+<h3>Professional Landscaping</h3>
+<p>A welcoming website concept showcasing outdoor services and easy estimate requests.</p>
+<a class="text-link" href="mailto:brightpathwebdesign@proton.me?subject=Landscaping%20Website%20Design">Build a website like this →</a>
+</div>
+</div>
+
+</div>
+<p class="portfolio-note">These are illustrative design concepts created to demonstrate possible website styles. They are not completed client projects.</p>
 </div>
 </section>
 
@@ -157,8 +227,8 @@ footer{padding:35px 0;border-top:1px solid #ffffff15;color:#91a2b9;font-size:13p
 <div class="container">
 <div class="section-head">
 <div class="eyebrow">Who We Help</div>
-<h2>Websites for the Businesses That Keep Communities Running</h2>
-<p>We work with local service businesses that want to look more professional and make it easier for customers to get in touch.</p>
+<h2>Websites for Businesses That Keep Communities Running</h2>
+<p>We help local service businesses build a stronger online presence and make it easier for customers to get in touch.</p>
 </div>
 <div class="industries">
 <span>Barbershops</span><span>Auto Detailers</span><span>Landscapers</span><span>Cleaning Companies</span><span>Restaurants</span><span>Contractors</span><span>Home Services</span><span>And More</span>
@@ -175,7 +245,7 @@ footer{padding:35px 0;border-top:1px solid #ffffff15;color:#91a2b9;font-size:13p
 </div>
 <div class="cards">
 <div class="card"><div class="process-number">01</div><h3>Tell Us About Your Business</h3><p>We learn about your services, customers, and what you want your website to accomplish.</p></div>
-<div class="card"><div class="process-number">02</div><h3>We Build Your Website</h3><p>We put together a professional design around your business and your goals.</p></div>
+<div class="card"><div class="process-number">02</div><h3>We Build Your Website</h3><p>We create a professional design around your business and your goals.</p></div>
 <div class="card"><div class="process-number">03</div><h3>Launch and Grow</h3><p>Once everything is approved, your website is ready to help customers find you.</p></div>
 </div>
 </div>
@@ -191,13 +261,21 @@ footer{padding:35px 0;border-top:1px solid #ffffff15;color:#91a2b9;font-size:13p
 </div>
 </div>
 </section>
+
 </main>
 
 <footer>
 <div class="container footer-inner">
-<div><a class="logo" href="#">BrightPath<span>.</span></a><p>Professional websites for growing businesses.</p></div>
-<div>Contact: <a href="mailto:brightpathwebdesign@proton.me">brightpathwebdesign@proton.me</a><p>© 2026 BrightPath Web Design. All rights reserved.</p></div>
+<div>
+<a class="logo" href="#">BrightPath<span>.</span></a>
+<p>Professional websites for growing businesses.</p>
+</div>
+<div>
+Contact: <a href="mailto:brightpathwebdesign@proton.me">brightpathwebdesign@proton.me</a>
+<p>© 2026 BrightPath Web Design. All rights reserved.</p>
+</div>
 </div>
 </footer>
+
 </body>
 </html>
